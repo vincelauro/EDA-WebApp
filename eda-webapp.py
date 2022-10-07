@@ -29,7 +29,7 @@ if uploaded_file is not None:
         csv = pd.read_csv(uploaded_file)
         return csv
     df = load_csv()
-    pr = ProfileReport(df, explorative=True)
+    pr = ProfileReport(df, explorative=True, dark_mode=True)
     st.header('**Input DataFrame**')
     st.write(df)
     st.write('---')
